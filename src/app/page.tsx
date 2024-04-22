@@ -3,6 +3,7 @@ import { SettingsTabs } from "../components/SettingsTabs"
 import * as Input from "@/components/Input"
 import * as FileInput from "@/components/Form/FileInput"
 import { Select } from "@/components/Form/Select";
+import { SelectItem } from "@/components/Form/Select/SelectItem";
 
 
 export default function Home() {
@@ -69,11 +70,18 @@ export default function Home() {
 {/* Country */}
 <div className="grid gap-3 grid-cols-form pt-5">
           <label htmlFor="country" className="text-sm font-medium text-zinc-700">Country</label>
-          <Select />
+          <Select placeholder="Select a country...">
+            <SelectItem value="br" text="Brazil"/>
+            <SelectItem value="us" text="United States"/>
+          </Select>
           </div>
 {/* Timezone */}
 <div className="grid gap-3 grid-cols-form pt-5">
           <label htmlFor="timezone" className="text-sm font-medium text-zinc-700">Timezone</label>
+          <Select placeholder="Select a timezone...">
+            <SelectItem value="us" text="Pacific Standard Time (PST-08:00)"/>
+            <SelectItem value="br" text="Brazilian Standard Time (GMT-03:00)"/>
+          </Select>
           </div>
 {/* Bio */}         
           <div className="grid gap-3 grid-cols-form pt-5">
