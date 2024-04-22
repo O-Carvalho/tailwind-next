@@ -23,6 +23,17 @@ const config: Config = {
       borderWidth: {
         6: '6px'
       },
+
+      keyframes: {
+        slideDownAndFade: {
+          from: { opacity: '0', transform: 'translateY(-2px)' },
+          to: { opacity: '1', transform: 'translateY(0px)' },
+        },
+      },
+
+      animation: {
+        slideDownAndFade: 'slideDownAndFade 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+      },
     },
   },
   plugins: [],
