@@ -10,7 +10,7 @@ import { Button } from "../Button";
 
 export function Sidebar() {
   return(
-    <Collapsible.Root className="border-b data-[state=open]:h-screen border-zinc-200 flex flex-col p-4 gap-6 fixed data-[state=open]:bottom-0 lg:data-[state=closed]:bottom-0 lg:data-[state=closed]:h-screen left-0 top-0 right-0 z-20 bg-white lg:right-auto lg:w-80 lg:border-r lg:px-5 lg:py-8">
+    <Collapsible.Root className="border-b data-[state=open]:h-screen border-zinc-200 flex flex-col p-4 gap-6 fixed data-[state=open]:bottom-0 lg:data-[state=closed]:bottom-0 lg:data-[state=closed]:h-screen left-0 top-0 right-0 z-20 bg-white lg:right-auto lg:w-80 lg:border-r lg:px-5 lg:py-8 dark:bg-zinc-900 dark:border-zinc-800">
      <div className="flex items-center justify-between">
       <Logo />
       <Collapsible.Trigger asChild className="lg:hidden">
