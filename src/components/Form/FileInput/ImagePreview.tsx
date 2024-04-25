@@ -17,8 +17,8 @@ export function ImagePreview(){
 
   if (previewURL === null) {
     return(
-      <div className="bg-teal-50 flex h-16 w-16 items-center justify-center rounded-full">
-        <User className="w-8 h-8 text-teal-500" />
+      <div className="bg-teal-50 flex h-16 w-16 items-center justify-center rounded-full dark:bg-teal-500/10">
+        <User className="w-8 h-8 text-teal-500 dark:text-teal-300" />
       </div>
     )
   } else {

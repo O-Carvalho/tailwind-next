@@ -10,9 +10,9 @@ const button = tv({
 
   variants: {
     variant: {
-      primary: 'bg-teal-500 text-whit hover:bg-teal-600',
-      ghost: 'rounded-md px-2 hover:bg-zinc-50 shadow-none text-zinc-500 dark:hover:bg-zinc-800 dark:text-zinc-400',
-      outline: 'border border-zinc-300 text-zinc-700 hover:bg-zinc-50',
+      primary: 'bg-teal-500 text-whit hover:bg-teal-600 dark:bg-teal-500 dark:hover:bg-teal-600',
+      ghost: 'rounded-md px-2 hover:bg-zinc-50 shadow-none text-zinc-500 dark:hover:bg-white/5 dark:text-zinc-400',
+      outline: 'border border-zinc-300 text-zinc-700 hover:bg-zinc-50 dark:border-zinc-700 dark:text-zinc-400 dark:hover:bg-zinc-800',
     }
   },
 
