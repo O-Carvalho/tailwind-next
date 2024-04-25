@@ -15,7 +15,7 @@ export default function Home() {
      <SettingsTabs />
 
      <div className="mt-6 flex flex-col">
-      <div className="flex items-center justify-between pb-5 border-b border-zinc-200">
+      <div className="flex flex-col lg:flex-row items-center gap-4 justify-between pb-5 border-b border-zinc-200 lg:items-center">
       <div className="space-y-1">
         <h2 className="text-lg font-medium text-zinc-900">Personal info</h2>
         <span className="text-sm text-zinc-500">Update your photo and personal datails here.</span>
@@ -27,20 +27,24 @@ export default function Home() {
       </div>
 
       <form id="settings" action="" className="mt-6 flex flex-col w-full gap-5 divide-y divide-zinc-200">
-        <div className="grid gap-3 grid-cols-form">
+        <div className="flex flex-col lg:grid gap-3 lg:grid-cols-form">
           <label htmlFor="firstName" className="text-sm font-medium text-zinc-700">Name</label>
 {/* Nome */}
-          <div className="grid gap-6 grid-cols-2">
+          <div className="flex flex-col lg:grid gap-6 lg:grid-cols-2">
             <Input.InputRoot>
               <Input.InputControl id="firstName" defaultValue="Matheus"/>
             </Input.InputRoot>
+
+            <div className="flex flex-col gap-3 lg:block">
+            <label htmlFor="lastName" className="text-sm font-medium text-zinc-700 lg:sr-only">Last name</label>
             <Input.InputRoot>
               <Input.InputControl defaultValue="Carvalho"/>
             </Input.InputRoot>
+            </div>
           </div>
         </div>
 {/* Email */}
-        <div className="grid gap-3 grid-cols-form pt-5">
+        <div className="flex flex-col lg:grid gap-3 lg:grid-cols-form pt-5">
           <label htmlFor="email" className="text-sm font-medium text-zinc-700">Email address</label>
             <Input.InputRoot>
             <Input.InputPrefix>
@@ -50,12 +54,12 @@ export default function Home() {
             </Input.InputRoot>
           </div>
 {/* Photo */}
-<div className="grid gap-3 grid-cols-form pt-5">
+<div className="flex flex-col lg:grid gap-3 lg:grid-cols-form pt-5">
           <label htmlFor="photo" className="text-sm font-medium text-zinc-700">Your Photo 
           <span className="text-sm font-normal text-zinc-500 block mt-0.5">This will be displayed on your profile</span>
           </label>
             
-            <FileInput.Root className="flex items-start gap-5">
+            <FileInput.Root className="flex flex-col lg:flex-row lg:items-start gap-5">
               <FileInput.ImagePreview />
               <FileInput.Trigger />
               <FileInput.Control />
@@ -63,14 +67,14 @@ export default function Home() {
 
           </div>
 {/* Role */}
-          <div className="grid gap-3 grid-cols-form pt-5">
+          <div className="flex flex-col lg:grid gap-3 lg:grid-cols-form pt-5">
           <label htmlFor="role" className="text-sm font-medium text-zinc-700">Role</label>
             <Input.InputRoot>
               <Input.InputControl id="role" defaultValue="Desenvolvedor Front-end"/>
             </Input.InputRoot>
           </div>
 {/* Country */}
-<div className="grid gap-3 grid-cols-form pt-5">
+<div className="flex flex-col lg:grid gap-3 lg:grid-cols-form pt-5">
           <label htmlFor="country" className="text-sm font-medium text-zinc-700">Country</label>
           <Select placeholder="Select a country...">
             <SelectItem value="br" text="Brazil"/>
@@ -78,7 +82,7 @@ export default function Home() {
           </Select>
           </div>
 {/* Timezone */}
-<div className="grid gap-3 grid-cols-form pt-5">
+<div className="flex flex-col lg:grid gap-3 lg:grid-cols-form pt-5">
           <label htmlFor="timezone" className="text-sm font-medium text-zinc-700">Timezone</label>
           <Select placeholder="Select a timezone...">
             <SelectItem value="us" text="Pacific Standard Time (PST-08:00)"/>
@@ -86,11 +90,12 @@ export default function Home() {
           </Select>
           </div>
 {/* Bio */}         
-          <div className="grid gap-3 grid-cols-form pt-5">
+          <div className="flex flex-col lg:grid gap-3 lg:grid-cols-form pt-5">
           <label htmlFor="bio" className="text-sm font-medium text-zinc-700">Bio
           <span className="text-sm font-normal text-zinc-500 block mt-0.5">Write a short introduction.</span>
           </label>
-            <div className="grid gap-3 grid-cols-2">
+            <div className="space-y-3">
+            <div className="flex flex-col lg:grid gap-3 lg:grid-cols-2">
               <Select placeholder="" defaultValue="normal">
                 <SelectItem value="normal" text="Normal Text"/>
                 <SelectItem value="md" text="Markdown"/>
@@ -118,9 +123,10 @@ export default function Home() {
               defaultValue={"I'm a Product Designer based in Melbourne, Australia"}
              />
             </div>
+            </div>
           </div>
 {/* Portfolio Projects */}         
-<div className="grid gap-3 grid-cols-form pt-5">
+<div className="flex flex-col lg:grid gap-3 lg:grid-cols-form pt-5">
           <label htmlFor="projects" className="text-sm font-medium text-zinc-700">Portfolio Projects
           <span className="text-sm font-normal text-zinc-500 block mt-0.5">Share a few snippets of your work.</span>
           </label>
